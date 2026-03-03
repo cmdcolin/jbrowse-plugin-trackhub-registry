@@ -76,7 +76,7 @@ if (isWatch) {
           method: req.method,
           headers: req.headers,
         },
-        (proxyRes) => {
+        proxyRes => {
           res.writeHead(proxyRes.statusCode, {
             ...proxyRes.headers,
             'Access-Control-Allow-Origin': '*',

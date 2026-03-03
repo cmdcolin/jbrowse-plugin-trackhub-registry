@@ -3,7 +3,7 @@ import { generateUnsupportedTrackConf } from '@jbrowse/core/util/tracks'
 
 function getSubtracks(track, trackPath = []) {
   if (track.members) {
-    return Object.values(track.members).flatMap((subTrack) =>
+    return Object.values(track.members).flatMap(subTrack =>
       getSubtracks(
         subTrack,
         track.shortLabel ? trackPath.concat([track.shortLabel]) : trackPath,
@@ -17,7 +17,7 @@ function getSubtracks(track, trackPath = []) {
 export function generateTracks(trackDb, assemblyName, sequenceAdapter) {
   const { configuration } = trackDb
   const subTracks = getSubtracks({ members: configuration })
-  return subTracks.map((subTrack) => {
+  return subTracks.map(subTrack => {
     const ret = makeTrackConfig(subTrack, trackDb.hub.url, sequenceAdapter)
     return {
       ...makeTrackConfig(subTrack, trackDb.hub.url, sequenceAdapter),

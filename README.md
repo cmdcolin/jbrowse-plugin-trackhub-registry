@@ -4,8 +4,8 @@ Plugin for using the trackhub registry (http://www.trackhubregistry.org/)
 
 ## Usage in jbrowse-web
 
-Add to the "plugins" of your JBrowse Web config. The unpkg CDN should be
-stable, or you can download the js file to your server
+Add to the "plugins" of your JBrowse Web config. The unpkg CDN should be stable,
+or you can download the js file to your server
 
 ```json
 {

@@ -11,7 +11,7 @@ import { makeStyles } from 'tss-react/mui'
 
 import type { SelectChangeEvent } from '@mui/material'
 
-const useStyles = makeStyles()((theme) => ({
+const useStyles = makeStyles()(theme => ({
   formControl: {
     minWidth: 192,
     marginLeft: theme.spacing(2),
@@ -38,7 +38,7 @@ function SelectBox({
     <FormControl className={classes.formControl}>
       <InputLabel>{label}</InputLabel>
       <Select value={selectedItem} onChange={handleSelect} label={helpText}>
-        {selectList.map((item) => {
+        {selectList.map(item => {
           let value
           let description
           if (item.name) {

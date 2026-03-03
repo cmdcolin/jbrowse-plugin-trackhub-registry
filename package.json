@@ -23,11 +23,6 @@
     "prepack": "yarn build",
     "postversion": "git push --follow-tags"
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
   "dependencies": {
     "@gmod/ucsc-hub": "^2.0.3",
     "@mui/icons-material": "^7.3.7"

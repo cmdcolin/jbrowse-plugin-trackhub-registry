@@ -26,7 +26,7 @@ export default function stateModelFactory(pluginManager: PluginManager) {
     .volatile(() => ({
       error: undefined as unknown,
     }))
-    .actions((self) => ({
+    .actions(self => ({
       async connect(connectionConf: AnyConfigurationModel) {
         self.clear()
         const trackDbId = readConfObject(connectionConf, 'trackDbId')
