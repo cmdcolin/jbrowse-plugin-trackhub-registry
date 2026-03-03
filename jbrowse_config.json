@@ -2,7 +2,7 @@
   "plugins": [
     {
       "name": "TrackHubRegistry",
-      "url": "http://localhost:9000/dist/jbrowse-plugin-trackhub-registry.umd.development.js"
+      "url": "http://localhost:9000/dist/out.js"
     }
   ]
 }

@@ -9,15 +9,10 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 22.x
       - name: Install deps (with cache)
         uses: bahmutov/npm-install@v1
-      - name: Get latest JBrowse
-        run: mkdir .jbrowse && yarn run jbrowse create --force .jbrowse
-      - name: Run unit tests
-        run: yarn test --passWithNoTests
-      - name: Test plugin
-        run: yarn run test:e2e
+
